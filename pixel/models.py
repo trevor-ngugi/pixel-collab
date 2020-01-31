@@ -14,3 +14,12 @@ class Image(models.Model):
 
 class Location(models.Model):
     place=models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.place
+
+class Category(models.Model):
+    name=models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name
