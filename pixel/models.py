@@ -7,6 +7,9 @@ class Place(models.Model):
     def __str__(self):
         return self.location
 
+    def save_place(self):
+        self.save()
+
 class Category(models.Model):
     name=models.CharField(max_length =30)
 
@@ -26,6 +29,7 @@ class Image(models.Model):
 
     def save_image(self):
         self.save()
+
 
     def delete_image(self):
         self.delete()
