@@ -9,3 +9,8 @@ class PlaceTestClass(TestCase):
     
     def test_instance(self):
         self.assertTrue(isinstance(self.nairobi,Place))
+
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.food=Category(name='food')
+        self.assertTrue(isinstance(self.food,Category))
