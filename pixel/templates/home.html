@@ -2,6 +2,32 @@
 
 {%block content%}
 {{block.super}}
+<div class="container">
 <h1 class='text-center'>home page for pixel_collab</h1>
+
+
+    <!-- Looping through news   -->
+    {% for post in posts %}
+  
+    <div class="row">
+      <!-- displaying News articles -->
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h2 class="text-center"> {{ post.image }} </h2>
+        <h2 class="text-center"> {{ post.image_name}} </h2>
+        <h2 class="text-center"> {{ post.description }} </h2>
+        <h2 class="text-center"> {{ post.location }} </h2>
+        <h2 class="text-center"> {{ post.category }} </h2>
+
+      </div>
+  
+    </div>
+  
+    {% empty %}
+    <div class="row">
+      <h2 class="text-center">There No posts</h2>
+    </div>
+    {% endfor %}
+  
+  </div>
 
 {%endblock%}

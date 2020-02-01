@@ -42,6 +42,10 @@ class Image(models.Model):
     def get_image_by_id(cls,id):
         return cls.objects.filter(id=id)[0]
 
+    @classmethod
+    def show_images(cls):
+        return cls.objects.order_by('image_name')
+
 
     #write update method
 
