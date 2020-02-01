@@ -25,6 +25,11 @@ class CategoryTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.food,Category))
 
+    def test_save_method(self):
+        self.food.save_category()
+        categories=Category.objects.all()
+        self.assertTrue(len(categories)>0)
+
 class ImageTestClass(TestCase):
     def setUp(self):
         self.nairobi=Place(location='nairobi')

@@ -16,6 +16,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def save_category(self):
+        self.save()
+
 class Image(models.Model):
     image=models.CharField(max_length =30)
     image_name=models.CharField(max_length =30)
