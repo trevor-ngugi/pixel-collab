@@ -30,10 +30,15 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
+    @classmethod
+    def get_image_by_id(cls,id):
+        return cls.objects.filter(id=id)[0]
+
+
     #write update method
 
 
-    
+
 
     # class Meta:                                            for ordering
     #     ordering = ['first_name']

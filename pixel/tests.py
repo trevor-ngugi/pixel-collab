@@ -47,5 +47,11 @@ class ImageTestClass(TestCase):
         self.post.save()
         self.assertEqual(self.post.image,'newimagepic')
 
+    def test_get_image_by_id(self):
+        image=Image.get_image_by_id(self.post.id)
+        self.assertEqual(image,self.post)
+
+
+
     
 
