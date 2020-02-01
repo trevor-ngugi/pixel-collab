@@ -14,3 +14,9 @@ class CategoryTestClass(TestCase):
     def setUp(self):
         self.food=Category(name='food')
         self.assertTrue(isinstance(self.food,Category))
+
+class ImageTestClass(TestCase):
+    def setUp(self):
+        self.post=Image(image='imagepic',image_name='food pic',description='nice food')
+        self.assertTrue(isinstance(self.post,Image))
+        
