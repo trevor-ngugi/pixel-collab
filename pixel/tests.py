@@ -42,3 +42,10 @@ class ImageTestClass(TestCase):
         images=Image.objects.all()
         self.assertTrue(len(images)==0)
 
+    def test_update_image(self):
+        self.post.image='newimagepic'
+        self.post.save()
+        self.assertEqual(self.post.image,'newimagepic')
+
+    
+

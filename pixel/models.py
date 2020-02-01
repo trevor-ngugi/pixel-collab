@@ -30,6 +30,11 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
+    #write update method
+
+
+    
+
     # class Meta:                                            for ordering
     #     ordering = ['first_name']
 
