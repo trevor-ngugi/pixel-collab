@@ -27,6 +27,9 @@ class Image(models.Model):
     def save_image(self):
         self.save()
 
+    def delete_image(self):
+        self.delete()
+
     # class Meta:                                            for ordering
     #     ordering = ['first_name']
 
