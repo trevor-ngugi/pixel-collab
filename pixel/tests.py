@@ -16,8 +16,6 @@ class PlaceTestClass(TestCase):
         self.assertTrue(len(locations)>0)
 
 
-
-
 class CategoryTestClass(TestCase):
     def setUp(self):
         self.food=Category(name='food')
@@ -51,7 +49,7 @@ class ImageTestClass(TestCase):
         self.assertTrue(len(images)>0)
 
     def test_delete_image(self):
-        self.post.delete_image()
+        Image.delete_image(self.post.id)
         images=Image.objects.all()
         self.assertTrue(len(images)==0)
 
