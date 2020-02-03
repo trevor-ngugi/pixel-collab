@@ -21,7 +21,7 @@ class Category(models.Model):
         self.save()
 
 class Image(models.Model):
-    image=models.CharField(max_length =30)
+    image = models.ImageField(upload_to = 'images/')
     image_name=models.CharField(max_length =30)
     description=models.TextField() 
     location=models.ForeignKey(Place )#add default to 0
