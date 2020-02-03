@@ -1,1 +1,1 @@
-web: gunicorn pixel_collab.wsgi --log-file -
+web: gunicorn pixel_collab.wsgi
