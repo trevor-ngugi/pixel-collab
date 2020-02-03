@@ -46,6 +46,11 @@ class Image(models.Model):
     def show_images(cls):
         return cls.objects.order_by('image_name')
 
+    @classmethod
+    def search_category(cls,search_term):
+        images = cls.objects.filter(category__name__icontains=search_term)
+        return images
+
 
     #write update method
 
