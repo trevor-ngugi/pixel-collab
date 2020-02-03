@@ -44,7 +44,7 @@ class Image(models.Model):
 
     @classmethod
     def show_images(cls):
-        return cls.objects.order_by('image_name')
+        return cls.objects.order_by('location')
 
     @classmethod
     def search_category(cls,search_term):
